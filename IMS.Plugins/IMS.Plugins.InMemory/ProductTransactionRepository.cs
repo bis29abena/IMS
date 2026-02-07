@@ -1,0 +1,69 @@
+﻿using IMS.CoreBusiness;
+using IMS.CoreBusiness.Enums;
+using IMS.UseCases.PluginInterfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IMS.Plugins.InMemory
+{
+    public class ProductTransactionRepository : IProductionTransactionRepository
+    {
+        private List<ProductTransaction> _productTransactions = new List<ProductTransaction>();
+
+        private readonly IProductRepository productRepository;
+        private readonly IInventoryTransactionRespository inventoryTransactionRespository;
+        private readonly IInventoryRepository inventoryRepository;
+
+        public ProductTransactionRepository(IProductRepository productRepository, 
+            IInventoryTransactionRespository inventoryTransactionRespository,
+            IInventoryRepository inventoryRepository
+            )
+        {
+            this.productRepository = productRepository;
+            this.inventoryTransactionRespository = inventoryTransactionRespository;
+            this.inventoryRepository = inventoryRepository;
+        }
+        public async Task ProduceAsync(string productionNumber, Product product, int quantity, string doneBy, double? price)
+        {
+            // decrease the inventories
+            var prod = await this.productRepository.FindProductAsync(product.ProductId);
+
+            if (prod is not null) 
+            {
+                foreach (var prodInv in prod.ProductInventories) 
+                {
+                    if(prodInv is not null)
+                    {
+                        //adding inventory transactions
+                        this.inventoryTransactionRespository.ProduceAsync(productionNumber, prodInv.Inventory, prodInv.InventoryQuantity * quantity,
+                            doneBy, -1);
+
+                        var inv = await this.inventoryRepository.FindInventoryAsync(prodInv.InventoryID);
+
+                        if (inv is not null)
+                        {
+                            // decreasing the inventories
+                            inv.Quantity -= prodInv.InventoryQuantity * quantity;
+                            await this.inventoryRepository.UpdateInventory(inv);
+                        }
+                    }
+                }
+            }
+            // add production transaction
+            this._productTransactions.Add(new ProductTransaction
+            {
+                ProductionNumber = productionNumber,
+                ProductId = product.ProductId,
+                QuantityBefore = quantity,
+                ActivityType = ProductTransactionType.ProduceProduct,
+                QuantityAfter = product.Quantity + quantity,
+                TransactionDate = DateTime.UtcNow,
+                DoneBy = doneBy
+
+            });
+        }
+    }
+}

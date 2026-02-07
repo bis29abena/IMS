@@ -1,0 +1,11 @@
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\bin\Debug\net10.0\IMS.CoreBusiness.deps.json
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\bin\Debug\net10.0\IMS.CoreBusiness.dll
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\bin\Debug\net10.0\IMS.CoreBusiness.pdb
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\obj\Debug\net10.0\IMS.CoreBusiness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\obj\Debug\net10.0\IMS.CoreBusiness.AssemblyInfoInputs.cache
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\obj\Debug\net10.0\IMS.CoreBusiness.AssemblyInfo.cs
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\obj\Debug\net10.0\IMS.CoreBusiness.csproj.CoreCompileInputs.cache
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\obj\Debug\net10.0\IMS.CoreBusiness.dll
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\obj\Debug\net10.0\refint\IMS.CoreBusiness.dll
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\obj\Debug\net10.0\IMS.CoreBusiness.pdb
+C:\Users\wa.bo\source\repos\IMS\IMS.CoreBusiness\obj\Debug\net10.0\ref\IMS.CoreBusiness.dll

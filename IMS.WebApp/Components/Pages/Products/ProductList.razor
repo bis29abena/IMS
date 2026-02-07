@@ -1,0 +1,20 @@
+﻿@page "/products"
+<h3>ProductList</h3>
+
+<br />
+<br />
+
+<SearchComponent OnSearch="HandleSearch" modelName="product"></SearchComponent>
+
+<br/>
+<ProductListComponent searchProductFilter="@inventoryNameToSearch"></ProductListComponent>
+<AddButtonComponent AddHref="/addProduct" ButtonName="Add Product"></AddButtonComponent>
+
+@code {
+    private string? inventoryNameToSearch;
+
+    private void HandleSearch(string searchFilter)
+    {
+        this.inventoryNameToSearch = searchFilter;
+    }
+}

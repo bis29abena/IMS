@@ -1,0 +1,97 @@
+﻿@page "/editproduct/{prodId:int}"
+@inject IViewProductByIdUseCase ViewProductByIdUseCase
+@inject IUpdateProductUseCase UpdateProductUseCase
+@inject NavigationManager NavigationManager
+
+@rendermode InteractiveServer
+
+<h3>Edit Product</h3>
+
+<br/>
+
+@if(!showError && product is not null)
+{
+    <EditForm Model="product" OnValidSubmit="Update">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+
+
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <InputText id="name"
+                       @bind-Value="product.ProductName"
+                       class="form-control">
+
+            </InputText>
+            <ValidationMessage For="() => product.ProductName"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <InputNumber id="quantity"
+                         @bind-Value="product.Quantity"
+                         class="form-control">
+            </InputNumber>
+            <ValidationMessage For="() => product.Quantity"></ValidationMessage>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <InputNumber id="price"
+                         @bind-Value="product.Price"
+                         class="form-control">
+            </InputNumber>
+            <ValidationMessage For="() => product.Price"></ValidationMessage>
+        </div>
+
+
+        <div class="form-group">
+            <label for="price">Inventories</label>
+            <ProductInventoriesComponent Product="this.product"></ProductInventoriesComponent>
+            <ValidationMessage For="() => product.ProductInventories"></ValidationMessage>
+        </div>
+
+        <br />
+
+        <div class="flex-column gap-3 align-content-center">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="/products" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+    </EditForm>
+}
+
+@if (showError)
+{
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        @errorMessage
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int prodId { get; set; }
+    private bool showError = false;
+    private string errorMessage = string.Empty;
+
+    [SupplyParameterFromForm]
+    private Product? product { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        this.product ??= await ViewProductByIdUseCase.ExecuteAsync(this.prodId);
+
+        if(this.product is null)
+        {
+            this.showError = true;
+            this.errorMessage = "Product record not found!!!";
+        }
+    }
+
+    private async Task Update()
+    {
+        if(product is not null)
+        {          
+            await UpdateProductUseCase.ExecuteAsync(product);
+            NavigationManager.NavigateTo("/products");
+        }
+    }
+}

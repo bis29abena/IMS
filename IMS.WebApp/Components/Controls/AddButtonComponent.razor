@@ -1,0 +1,10 @@
+﻿<br/>
+
+<a href="@AddHref" class="btn btn-outline-success">@ButtonName</a>
+
+@code {
+    [Parameter]
+    public string AddHref { get; set; } = string.Empty;
+    [Parameter]
+    public string ButtonName { get; set; } = string.Empty;
+}

@@ -1,0 +1,90 @@
+﻿@page "/produce"
+
+@inject IViewProductsByNameUseCase ViewProductsByNameUseCase
+@inject IViewProductByIdUseCase ViewProductByIdUseCase
+@inject IProduceProductUseCase ProduceProductUseCase
+@inject IJSRuntime JSRuntime
+
+@rendermode InteractiveServer
+
+
+<h3>Produce Product</h3>
+
+<br/>
+
+<EditForm id="produce-form" Model="produceProductViewModel" OnValidSubmit="Produce">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+
+    <div class="form-group">
+        <label for="po">Prodution #</label>
+        <InputText id="po" @bind-Value="produceProductViewModel.ProductionNumber" class="form-control"></InputText>
+        <ValidationMessage For="() => produceProductViewModel.ProductionNumber"></ValidationMessage>
+    </div>
+    <br />
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <AutoCompleteComponent Label="Product to produce" SearchFunction="SearchProduct" OnItemSelected="HandleSelectedItem"></AutoCompleteComponent>
+                
+                <ValidationMessage For="() => produceProductViewModel.ProductId"></ValidationMessage>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="qty">Quantity</label>
+        <InputNumber id="qty" @bind-Value="produceProductViewModel.QuantityToProduce" class="form-control"></InputNumber>
+        <ValidationMessage For="() => produceProductViewModel.QuantityToProduce"></ValidationMessage>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Produce</button>
+</EditForm>
+
+@code {
+    private ProduceProductViewModel produceProductViewModel = new ProduceProductViewModel();
+    private Product? selectedProduct = null;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+
+        if (firstRender)
+        {
+            JSRuntime.InvokeVoidAsync("ignoreSubmission", "produce-form");
+        }
+    }
+
+
+
+    private List<ItemViewModel>? SearchProduct(string name)
+    {
+        var list = ViewProductsByNameUseCase.ExecuteAsync(name).GetAwaiter().GetResult();
+
+        if (list is null) return null;
+
+        return list.Select(x => new ItemViewModel { Id = x.ProductId, Name = x.ProductName })?.ToList();
+    }
+
+    private async Task HandleSelectedItem(ItemViewModel item)
+    {
+        selectedProduct = await ViewProductByIdUseCase.ExecuteAsync(item.Id);
+
+        this.produceProductViewModel.ProductId = item.Id;
+        this.produceProductViewModel.Product = selectedProduct;
+
+    }
+
+    private async Task Produce()
+    {
+        await ProduceProductUseCase.ExecuteAsync(
+             this.produceProductViewModel.ProductionNumber,
+             selectedProduct,
+             this.produceProductViewModel.QuantityToProduce,
+             "Frank",
+             null
+         );
+
+        this.produceProductViewModel = new ProduceProductViewModel();
+        this.selectedProduct = null;
+    }
+}

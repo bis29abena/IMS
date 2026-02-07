@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "IMS.CoreBusiness/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/IMS.CoreBusiness.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IMS.CoreBusiness.dll": {}
+        }
+      },
+      "IMS.UseCases/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "IMS.CoreBusiness": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IMS.UseCases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IMS.UseCases.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IMS.CoreBusiness/1.0.0": {
+      "type": "project",
+      "path": "../../IMS.CoreBusiness/IMS.CoreBusiness.csproj",
+      "msbuildProject": "../../IMS.CoreBusiness/IMS.CoreBusiness.csproj"
+    },
+    "IMS.UseCases/1.0.0": {
+      "type": "project",
+      "path": "../../IMS.UseCases/IMS.UseCases.csproj",
+      "msbuildProject": "../../IMS.UseCases/IMS.UseCases.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "IMS.UseCases >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\wa.bo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj",
+      "projectName": "IMS.Plugins.InMemory",
+      "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj",
+      "packagesPath": "C:\\Users\\wa.bo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\wa.bo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj": {
+              "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.12, 9.0.12]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.12, 9.0.12]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[9.0.12, 9.0.12]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

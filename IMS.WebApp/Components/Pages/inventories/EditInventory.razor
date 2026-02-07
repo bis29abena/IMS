@@ -1,0 +1,86 @@
+﻿@page "/editinventory/{invId:int}"
+@inject IViewInventoryByIdUseCase ViewInventoryByIdUseCase
+@inject IUpdateInventoryUseCase UpdateInventoryUseCase
+@inject NavigationManager NavigationManager
+
+<h3>Edit Inventory</h3>
+
+<br/>
+
+@if(!showError && inventory is not null)
+{   
+    <EditForm Model="inventory" FormName="formInventory" OnValidSubmit="Update">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+        <InputNumber @bind-Value="inventory.InventoryId" hidden></InputNumber>
+
+        <div class="form-group">
+            <label for="name">Inventory Name</label>
+            <InputText id="name"
+                       @bind-Value="inventory.InventoryName"
+                       class="form-control">
+
+            </InputText>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <InputNumber id="quantity"
+                         @bind-Value="inventory.Quantity"
+                         class="form-control">
+            </InputNumber>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <InputNumber id="price"
+                         @bind-Value="inventory.Price"
+                         class="form-control">
+            </InputNumber>
+        </div>
+
+        <br />
+
+        <div class="flex-column gap-3 align-content-center">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="/inventories" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+    </EditForm>
+}
+
+@if (showError)
+{
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        @errorMessage
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int InvId { get; set; }
+    private bool showError = false;
+    private string errorMessage = string.Empty;
+
+    [SupplyParameterFromForm]
+    private Inventory? inventory { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        this.inventory ??= await ViewInventoryByIdUseCase.ExecuteAsync(this.InvId);
+
+        if(this.inventory is null)
+        {
+            this.showError = true;
+            this.errorMessage = "Inventoy record not found!!!";
+        }
+    }
+
+    private async Task Update()
+    {
+        if(inventory is not null)
+        {          
+            await UpdateInventoryUseCase.ExecuteAsync(inventory);
+            NavigationManager.NavigateTo("/inventories");
+        }
+    }
+}

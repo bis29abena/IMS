@@ -7,6 +7,8 @@ using IMS.UseCases.Products.Interfaces;
 using IMS.WebApp.Components;
 using IMS.UseCases.Activities.interfaces;
 using IMS.UseCases.Activities;
+using IMS.UseCases.Reports.Interface;
+using IMS.UseCases.Reports;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +36,9 @@ builder.Services.AddTransient<IViewProductByIdUseCase, ViewProductByIdUseCase>()
 
 builder.Services.AddTransient<IPurchaseInventoryUseCase, PurchaseInventoryUseCase>();
 builder.Services.AddTransient<IProduceProductUseCase, ProduceProductUseCase>();
+builder.Services.AddTransient<ISellProductUseCase, SellProductUseCase>();
+
+builder.Services.AddTransient<ISearchInventoryTransactionUseCase, SearchInventoryTransactionUseCase>();
 
 var app = builder.Build();
 

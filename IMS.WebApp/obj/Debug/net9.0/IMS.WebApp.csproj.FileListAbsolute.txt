@@ -89,3 +89,4 @@ C:\Users\wa.bo\source\repos\IMS\IMS.WebApp\obj\Debug\net9.0\scopedcss\Components
 C:\Users\wa.bo\source\repos\IMS\IMS.WebApp\obj\Debug\net9.0\compressed\vwrbihz9dj-{0}-hrz0k4lu5v-hrz0k4lu5v.gz
 C:\Users\wa.bo\source\repos\IMS\IMS.WebApp\obj\Debug\net9.0\compressed\1tk3lxi5s3-{0}-hrz0k4lu5v-hrz0k4lu5v.gz
 C:\Users\wa.bo\source\repos\IMS\IMS.WebApp\obj\Debug\net9.0\compressed\3z1gmvlmh3-{0}-5faiiys8vn-5faiiys8vn.gz
+C:\Users\wa.bo\source\repos\IMS\IMS.WebApp\obj\Debug\net9.0\IMS.WebApp.sourcelink.json

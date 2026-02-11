@@ -3,6 +3,7 @@ using IMS.CoreBusiness.Enums;
 using IMS.UseCases.PluginInterfaces;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,6 +82,35 @@ namespace IMS.Plugins.InMemory
             });
 
             return Task.CompletedTask;
+        }
+
+        public async Task<IEnumerable<ProductTransaction>> GetProductTransactions(string productName, DateTime? dateFrom, DateTime? dateTo, ProductTransactionType? productTransactionType)
+        {
+            // get all products so we can use it on th join statement
+            var products = (await this.productRepository.GetProductsByNameAsync(string.Empty)).ToList();
+
+            // write the query
+            var query = from prodTransactions in _productTransactions
+                        join prod in products on prodTransactions.ProductId equals prod.ProductId
+                        where (string.IsNullOrWhiteSpace(productName) || prod.ProductName.ToLower().IndexOf(productName.ToLower()) >= 0) &&
+                              (!dateFrom.HasValue || prodTransactions.TransactionDate >= dateFrom.Value.Date) &&
+                              (!dateTo.HasValue || prodTransactions.TransactionDate <= dateTo.Value.Date) &&
+                              (!productTransactionType.HasValue || prodTransactions.ActivityType == productTransactionType)
+
+                        select new ProductTransaction
+                        {
+                            Product = prod,
+                            PONumber = prodTransactions.PONumber,
+                            SONumber = prodTransactions.SONumber,
+                            QuantityAfter = prodTransactions.QuantityAfter,
+                            QuantityBefore = prodTransactions.QuantityBefore,
+                            ProductId = prodTransactions.ProductId,
+                            UnitPrice = prodTransactions.UnitPrice,
+                            TransactionDate = prodTransactions.TransactionDate,
+                            DoneBy = prodTransactions.DoneBy,
+                        };
+
+            return query;
         }
     }
 }

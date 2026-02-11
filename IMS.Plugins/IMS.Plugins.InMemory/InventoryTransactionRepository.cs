@@ -42,6 +42,7 @@ namespace IMS.Plugins.InMemory
                             DoneBy = InvTransaction.DoneBy,
                             TransactionDate = InvTransaction.TransactionDate,
                             ActivityType = InvTransaction.ActivityType,
+                            ProductionNumber = InvTransaction.ProductionNumber,
                         };
 
             return query;

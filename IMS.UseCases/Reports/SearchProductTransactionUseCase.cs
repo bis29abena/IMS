@@ -20,6 +20,8 @@ namespace IMS.UseCases.Reports
         }
         public async Task<IEnumerable<ProductTransaction>> ExecuteAync(string productName, DateTime? dateFrom, DateTime? dateTo, ProductTransactionType? productTransactionType)
         {
+            if (dateTo.HasValue) dateTo = dateTo.Value.AddDays(1);
+
             return await this.productionTransactionRepository.GetProductTransactions(productName, dateFrom, dateTo, productTransactionType);
         }
     }

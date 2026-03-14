@@ -1,5 +1,6 @@
 ﻿@page "/producttransactions"
 
+@inject IJSRuntime JSRuntime
 @inject ISearchProductTransactionUseCase SearchProductTransactionUseCase
 @rendermode InteractiveServer
 
@@ -7,6 +8,9 @@
 <h3>Product Transactions</h3>
 
 <br />
+ 
+<div id="printarea">
+
 
 <div class="row">
     <div class="col">
@@ -35,51 +39,56 @@
         <label>&nbsp;</label>
         <button type="button" class="btn btn-primary form-control" @onclick="SearchProduct">Search</button>
     </div>
-    <div class="col">
-    </div>
+        <div class="col">
+            <label>&nbsp;</label>
+            <button type="button" class="btn btn-primary form-control" @onclick="Print">Print</button>
+        </div>
 </div>
 
 <br/>
 
-@if (productTransactions is not null && productTransactions.Count() > 0)
-{
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Product Name</th>
-                <th>Activity</th>
-                <th>Qty Before</th>
-                <th>Qty After</th>
-                <th>PO#</th>
-                <th>Production Number</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach(var prod in productTransactions)
-            {
+    @if (productTransactions is not null && productTransactions.Count() > 0)
+    {
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>@prod.TransactionDate.ToString("MM/dd/yyyy")</td>
-                    <td>@prod.Product.ProductName</td>
-                    <td>
-                        @if(prod.ActivityType == ProductTransactionType.ProduceProduct)
-                        {
-                            <text>Purchase</text>
-                        }
-                        else
-                        {
-                            <text>Produce</text>
-                        }
-                    </td>
-                    <td>@prod.QuantityBefore</td>
-                    <td>@prod.QuantityAfter</td>
-                    <td>@prod.SONumber</td>
-                    <td>@prod.ProductionNumber</td>
+                    <th>Date</th>
+                    <th>Product Name</th>
+                    <th>Activity</th>
+                    <th>Qty Before</th>
+                    <th>Qty After</th>
+                    <th>PO#</th>
+                    <th>Production Number</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var prod in productTransactions)
+                {
+                    <tr>
+                        <td>@prod.TransactionDate.ToString("MM/dd/yyyy")</td>
+                        <td>@prod.Product.ProductName</td>
+                        <td>
+                            @if (prod.ActivityType == ProductTransactionType.ProduceProduct)
+                            {
+                                <text>Produce</text>
+                            }
+                            else
+                            {
+                                <text>Purchase</text>
+                            }
+                        </td>
+                        <td>@prod.QuantityBefore</td>
+                        <td>@prod.QuantityAfter</td>
+                        <td>@prod.SONumber</td>
+                        <td>@prod.ProductionNumber</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</div>
+
 @code {
     private string ProName;
     private DateTime? dateTo;
@@ -101,5 +110,10 @@
     protected override async Task OnInitializedAsync()
     {
         await SearchProduct();
+    }
+
+    private void Print()
+    {
+        JSRuntime.InvokeVoidAsync("print");
     }
 }

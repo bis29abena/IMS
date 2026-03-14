@@ -122,7 +122,6 @@ C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\scopedcs
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\scopedcss\bundle\IMS.WebApp.styles.css
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\scopedcss\projectbundle\IMS.WebApp.bundle.scp.css
-C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\compressed\d3ktmeq0yn-{0}-khy4lop6wu-khy4lop6wu.gz
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\compressed\3z1gmvlmh3-{0}-5faiiys8vn-5faiiys8vn.gz
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\compressed\srb1xwotr2-{0}-t1cqhe9u97-t1cqhe9u97.gz
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\compressed\tepujpt5e9-{0}-c2jlpeoesf-c2jlpeoesf.gz
@@ -182,3 +181,4 @@ C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\refint\I
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\IMS.WebApp.pdb
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\IMS.WebApp.genruntimeconfig.cache
 C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\ref\IMS.WebApp.dll
+C:\Users\19079043\source\repos\TestProjects\IMS.WebApp\obj\Debug\net9.0\compressed\d3ktmeq0yn-{0}-xoe3nf27ry-xoe3nf27ry.gz

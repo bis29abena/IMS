@@ -100,7 +100,8 @@ namespace IMS.Plugins.InMemory
                         select new ProductTransaction
                         {
                             Product = prod,
-                            PONumber = prodTransactions.PONumber,
+                            ActivityType = prodTransactions.ActivityType,
+                            ProductionNumber = prodTransactions.ProductionNumber,
                             SONumber = prodTransactions.SONumber,
                             QuantityAfter = prodTransactions.QuantityAfter,
                             QuantityBefore = prodTransactions.QuantityBefore,

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "K0dkEztE6jc=",
+  "dgSpecHash": "22kA0uVLRFI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj",
+  "projectFilePath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\wa.bo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.13\\microsoft.windowsdesktop.app.ref.9.0.13.nupkg.sha512",
-    "C:\\Users\\wa.bo\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.13\\microsoft.netcore.app.ref.9.0.13.nupkg.sha512",
-    "C:\\Users\\wa.bo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.13\\microsoft.aspnetcore.app.ref.9.0.13.nupkg.sha512"
+    "C:\\Users\\19079043\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.14\\microsoft.windowsdesktop.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\19079043\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.14\\microsoft.netcore.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\19079043\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.14\\microsoft.aspnetcore.app.ref.9.0.14.nupkg.sha512"
   ],
   "logs": []
 }

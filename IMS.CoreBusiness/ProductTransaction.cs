@@ -13,7 +13,6 @@ namespace IMS.CoreBusiness
         public int ProductTransactionId { get; set; }
         [Required]
 
-        public string PONumber { get; set; } = string.Empty;
         public string SONumber { get; set; } = string.Empty;
         public string ProductionNumber { get; set; } = string.Empty;
         [Required]

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.WebApp\\IMS.WebApp.csproj": {}
+    "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.WebApp\\IMS.WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj": {
+    "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj",
+        "projectUniqueName": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj",
         "projectName": "IMS.CoreBusiness",
-        "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj",
-        "packagesPath": "C:\\Users\\wa.bo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.CoreBusiness\\obj\\",
+        "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj",
+        "packagesPath": "C:\\Users\\19079043\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wa.bo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\19079043\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -63,15 +64,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -79,24 +80,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj": {
+    "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj",
+        "projectUniqueName": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj",
         "projectName": "IMS.Plugins.InMemory",
-        "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj",
-        "packagesPath": "C:\\Users\\wa.bo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\obj\\",
+        "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj",
+        "packagesPath": "C:\\Users\\19079043\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.Plugins\\IMS.Plugins.InMemory\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wa.bo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\19079043\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -105,14 +106,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj": {
-                "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj"
+              "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj": {
+                "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj"
               }
             }
           }
@@ -127,7 +129,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -146,15 +148,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.12, 9.0.12]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[9.0.12, 9.0.12]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.12, 9.0.12]"
+              "version": "[9.0.14, 9.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -162,24 +164,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj": {
+    "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj",
+        "projectUniqueName": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj",
         "projectName": "IMS.UseCases",
-        "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj",
-        "packagesPath": "C:\\Users\\wa.bo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\obj\\",
+        "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj",
+        "packagesPath": "C:\\Users\\19079043\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wa.bo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\19079043\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -188,14 +190,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj": {
-                "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj"
+              "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj": {
+                "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj"
               }
             }
           }
@@ -210,7 +213,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -229,15 +232,15 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -245,24 +248,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.WebApp\\IMS.WebApp.csproj": {
+    "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.WebApp\\IMS.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.WebApp\\IMS.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.WebApp\\IMS.WebApp.csproj",
         "projectName": "IMS.WebApp",
-        "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.WebApp\\IMS.WebApp.csproj",
-        "packagesPath": "C:\\Users\\wa.bo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.WebApp\\obj\\",
+        "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.WebApp\\IMS.WebApp.csproj",
+        "packagesPath": "C:\\Users\\19079043\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wa.bo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\19079043\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -271,20 +274,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj": {
-                "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj"
+              "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj": {
+                "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj"
               },
-              "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj": {
-                "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj"
+              "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj": {
+                "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.Plugins\\IMS.Plugins.InMemory\\IMS.Plugins.InMemory.csproj"
               },
-              "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj": {
-                "projectPath": "C:\\Users\\wa.bo\\source\\repos\\IMS\\IMS.UseCases\\IMS.UseCases.csproj"
+              "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj": {
+                "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj"
               }
             }
           }
@@ -299,7 +303,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -318,19 +322,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[9.0.13, 9.0.13]"
+              "version": "[9.0.14, 9.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -341,7 +345,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

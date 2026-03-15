@@ -9,8 +9,16 @@ using IMS.UseCases.Activities.interfaces;
 using IMS.UseCases.Activities;
 using IMS.UseCases.Reports.Interface;
 using IMS.UseCases.Reports;
+using IMS.Plugins.EFCoreSql;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//add db context
+builder.Services.AddDbContextFactory<IMSDBContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("IMSDB"));
+});
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

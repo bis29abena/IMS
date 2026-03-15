@@ -1608,6 +1608,19 @@
         "runtime": {
           "bin/placeholder/IMS.CoreBusiness.dll": {}
         }
+      },
+      "IMS.UseCases/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "IMS.CoreBusiness": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IMS.UseCases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IMS.UseCases.dll": {}
+        }
       }
     }
   },
@@ -4716,11 +4729,17 @@
       "type": "project",
       "path": "../../IMS.CoreBusiness/IMS.CoreBusiness.csproj",
       "msbuildProject": "../../IMS.CoreBusiness/IMS.CoreBusiness.csproj"
+    },
+    "IMS.UseCases/1.0.0": {
+      "type": "project",
+      "path": "../../IMS.UseCases/IMS.UseCases.csproj",
+      "msbuildProject": "../../IMS.UseCases/IMS.UseCases.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "IMS.CoreBusiness >= 1.0.0",
+      "IMS.UseCases >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.14",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.14",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.14"
@@ -4761,6 +4780,9 @@
           "projectReferences": {
             "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj": {
               "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj"
+            },
+            "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj": {
+              "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj"
             }
           }
         }

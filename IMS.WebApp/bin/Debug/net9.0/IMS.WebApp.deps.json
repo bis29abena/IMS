@@ -908,6 +908,7 @@
       "IMS.Plugins.EFCoreSql/1.0.0": {
         "dependencies": {
           "IMS.CoreBusiness": "1.0.0",
+          "IMS.UseCases": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.14"
         },
         "runtime": {

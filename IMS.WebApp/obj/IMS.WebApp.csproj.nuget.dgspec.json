@@ -101,6 +101,9 @@
             "projectReferences": {
               "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj": {
                 "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.CoreBusiness\\IMS.CoreBusiness.csproj"
+              },
+              "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj": {
+                "projectPath": "C:\\Users\\19079043\\source\\repos\\TestProjects\\IMS.UseCases\\IMS.UseCases.csproj"
               }
             }
           }

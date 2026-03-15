@@ -9,6 +9,7 @@
       "IMS.Plugins.EFCoreSql/1.0.0": {
         "dependencies": {
           "IMS.CoreBusiness": "1.0.0",
+          "IMS.UseCases": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.14",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.14"
         },
@@ -901,6 +902,17 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "IMS.UseCases/1.0.0": {
+        "dependencies": {
+          "IMS.CoreBusiness": "1.0.0"
+        },
+        "runtime": {
+          "IMS.UseCases.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1289,6 +1301,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "IMS.CoreBusiness/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IMS.UseCases/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,5 +1,8 @@
 ﻿@page "/produce"
 
+
+@attribute [Authorize]
+
 @inject IViewProductsByNameUseCase ViewProductsByNameUseCase
 @inject IViewProductByIdUseCase ViewProductByIdUseCase
 @inject IProduceProductUseCase ProduceProductUseCase

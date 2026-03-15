@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IMS.Plugins.EFCoreSql")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3254d8982d69bcd1e0cf0baf9edb057595bced0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65ed36c1aaf417938fa583cadb55979088867557")]
 [assembly: System.Reflection.AssemblyProductAttribute("IMS.Plugins.EFCoreSql")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IMS.Plugins.EFCoreSql")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

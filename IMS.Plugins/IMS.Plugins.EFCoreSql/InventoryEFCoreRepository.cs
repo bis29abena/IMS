@@ -17,7 +17,7 @@ namespace IMS.Plugins.EFCoreSql
         {
             using var dbContext = this.dbContextFactory.CreateDbContext();
 
-            dbContext.Inventories!.Add(inventory);
+            await dbContext.Inventories!.AddAsync(inventory);
             await dbContext.SaveChangesAsync();
         }
 
@@ -40,6 +40,9 @@ namespace IMS.Plugins.EFCoreSql
         public async Task<IEnumerable<Inventory>> GetInvenoriesByNameAsync(string name)
         {
             using var dbContext = this.dbContextFactory.CreateDbContext();
+
+            if (string.IsNullOrWhiteSpace(name))
+                return await dbContext.Inventories!.ToListAsync();
 
             return await dbContext.Inventories!
                 .Where(i => EF.Functions.Like(i.InventoryName, $"%{name}%"))

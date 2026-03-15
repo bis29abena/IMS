@@ -47,6 +47,9 @@ namespace IMS.Plugins.EFCoreSql
         {
             using var dbContext = this.dbContextFactory.CreateDbContext();
 
+            if (string.IsNullOrWhiteSpace(name))
+                return await dbContext.Products!.ToListAsync();
+
             return await dbContext.Products!
                 .Where(p => EF.Functions.Like(p.ProductName, $"%{name}%"))
                 .ToListAsync();

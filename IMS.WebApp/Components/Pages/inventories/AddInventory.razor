@@ -1,4 +1,5 @@
 ﻿@page "/addinventory"
+@attribute [Authorize]
 @inject IAddInventoryUseCase addInventoryUseCase
 @inject NavigationManager NavigationManager
 
@@ -47,11 +48,18 @@
 
 @code {
     [SupplyParameterFromForm]
-    private Inventory inventory { get; set; } = new Inventory();
+    private InventoryViewModel inventory { get; set; } = new InventoryViewModel();
 
     private async Task Save()
     {
-        await addInventoryUseCase.ExecuteAsync(inventory);
+        var inv = new Inventory
+        {
+            InventoryName = inventory.InventoryName,
+            Quantity = inventory.Quantity,
+            Price = inventory.Price
+        };
+
+        await addInventoryUseCase.ExecuteAsync(inv);
         NavigationManager.NavigateTo("/inventories");
     }
 }
